@@ -3,6 +3,14 @@
         {% comment %} <link rel="stylesheet" href="{% static 'Demo/css/my1.css'%}"> {% endcomment %}
     </head>
     <body>
-        <h1>Hi Hello Everyone</h1>
+        <h1>Song Request Portal</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <p>Name:</p><input type="text" name="firstname"><br><br>
+            <p>Song:</p><input type="text" name="songname"><br><br>
+            <input type="submit"value="Submit"><br><br>
+        </form>
+        <div id='content'>{{mycontent|safe}}</div>
+        <h6>Concert Date: 28-10-2023</h6>
     </body>
 </html>
